@@ -1,16 +1,10 @@
 /*
-  AccessMate stylesheet.
-  Goals: calm, high-contrast, keyboard-friendly, and genuinely attractive.
-  Works in light and dark colour schemes, honours reduced-motion, and never
-  removes focus outlines without a stronger replacement. All sizing is rem-based.
+A.R.I.A Stylesheet.
+  
 
   Performance / security notes:
     - Zero external assets: no web fonts, no CDN, no remote images. The only
-      embedded assets are inline `data:` SVGs (permitted by img-src 'self' data:).
-    - No inline styles or <style> blocks, keeping style-src 'self' intact.
-
-  Contrast: body text and interactive text stay >= 4.5:1 against their
-  backgrounds in both themes.
+      embedded assets are inline `data:`
 */
 
 /* ---- Design tokens: light theme (default) ---- */
