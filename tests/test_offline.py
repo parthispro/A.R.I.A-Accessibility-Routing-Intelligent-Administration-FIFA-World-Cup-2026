@@ -77,7 +77,7 @@ def test_unmatched_message_without_profile_language_falls_back_to_english():
 def test_arabic_greeting_uses_arabic_template():
     # "Peace be upon you" — a greeting; must not fall back to English.
     answer = offline_answer("السلام عليكم", profile("ar", None))
-    assert "AccessMate" in answer
+    assert "A.R.I.A" in answer
     assert "FIFA" in answer
     assert "مرحبا" in answer  # Arabic "hello", proves the ar template was used
 
@@ -218,7 +218,7 @@ def test_unknown_venue_id_treated_as_no_venue():
 
 def test_greeting():
     answer = offline_answer("Hello!", profile("en", None))
-    assert "AccessMate" in answer
+    assert "A.R.I.A" in answer
 
 
 def test_fallback_help_for_unmatched_message():
