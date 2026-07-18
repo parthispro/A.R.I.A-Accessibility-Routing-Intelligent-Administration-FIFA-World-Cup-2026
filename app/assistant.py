@@ -28,7 +28,8 @@ from app import offline, tools
 #: environment variable for a different tier or model id. If the configured id
 #: is not available to the key, the API returns 404 and the app degrades to
 #: offline mode instead of failing.
-MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+
+MODEL = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash")
 
 #: Iteration cap on the function-calling loop — prevents runaway tool loops.
 _MAX_TOOL_ITERATIONS = 8
