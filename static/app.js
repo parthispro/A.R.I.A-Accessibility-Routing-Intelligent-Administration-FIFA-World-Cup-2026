@@ -12,8 +12,7 @@ A.R.I.A front-end logic.
   Accessibility posture:
     - New messages are appended into a role="log" aria-live="polite" region,
       so screen readers announce each new reply.
-    - Author is labelled in text ("You:" / "AccessMate:"), not colour alone.
-    - Language / direction (LTR / RTL for Arabic) is reflected on the transcript.
+    - Author is labelled in text ("You:" / "A.R.I.A:").
 */
 
 "use strict";
