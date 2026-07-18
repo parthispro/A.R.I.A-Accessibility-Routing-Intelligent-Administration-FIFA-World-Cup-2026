@@ -1,0 +1,21 @@
+# Virtual environments
+.venv/
+venv/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Secrets — never commit API keys
+.env
+
+# Tooling caches
+.pytest_cache/
+
+# OS cruft
+.DS_Store
+
+# Coverage data
+.coverage
+htmlcov/
+.ruff_cache/
