@@ -22,7 +22,7 @@ Real-Time Sim-Feed: Secure operational overview showing live gate traffic metric
 Outage Flagging: Administrative control panels to log dynamic infrastructure disruptions (e.g., broken escalators, elevator outages) that instantly update the Fan Assistant routing logic.
 
 🛠️ Project Architecture & Stack
-Plaintext
+'''Plaintext
 ├── app/                  # Backend Application Core (Python / FastAPI)
 │   ├── main.py           # Application Entry point, Security Middleware & API Router
 │   ├── assistant.py      # Live Gemini AI Logic & Function-Calling Loop
@@ -31,7 +31,7 @@ Plaintext
 └── static/               # Frontend Assets (100% Zero-Framework Vanilla Stack)
     ├── index.html        # Highly semantic structural layout (WCAG Compliant)
     ├── styles.css        # Clean layout styling with opaque, high-contrast UI panels
-    └── app.js            # Secure token handling, Fetch API calls, & WebGL interface wrapper
+    └── app.js            # Secure token handling, Fetch API calls, & WebGL interface wrapper'''
 Frontend: Standard HTML5, Vanilla CSS3, and Vanilla JavaScript. Built completely free of heavy frameworks or external CDNs to maximize loading speeds and stability over congested stadium cellular networks.
 
 Backend: FastAPI (Python 3.12+).
@@ -47,37 +47,37 @@ Python 3.12 or newer installed on your machine.
 Installation & Launch
 Clone the project and enter the working directory:
 
-Bash
+'''Bash
 cd aria-stadium-platform
-Set up a clean virtual environment:
+Set up a clean virtual environment:'''
 
 Mac/Linux:
 
-Bash
+'''Bash
 python3 -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate'''
 Windows:
 
-DOS
+'''DOS
 python -m venv .venv
-.venv\Scripts\activate
+.venv\Scripts\activate'''
 Install the dependencies:
 
-Bash
-pip install -r requirements.txt
+'''Bash
+pip install -r requirements.txt'''
 Configure Environment Variables:
 Create a .env file in the root directory:
 
-Code snippet
+'''Code snippet
 GEMINI_API_KEY="your_optional_gemini_api_key"
 ADMIN_USERNAME="admin"
 ADMIN_PASSWORD="your_secure_dashboard_password"
-(Note: Omitting the GEMINI_API_KEY will safely run the entire chat interface using the deterministic local Offline Engine).
+(Note: Omitting the GEMINI_API_KEY will safely run the entire chat interface using the deterministic local Offline Engine).'''
 
 Fire up the development server:
 
-Bash
-uvicorn app.main:app --reload
+'''Bash
+uvicorn app.main:app --reload'''
 View the platform:
 
 Open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser to launch the Fan Assistant interface.
