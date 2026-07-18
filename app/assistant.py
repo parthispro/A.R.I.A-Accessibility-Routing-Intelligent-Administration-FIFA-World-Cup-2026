@@ -357,11 +357,14 @@ def answer(
         return _live_answer(message, profile, history or [])
     except errors.ClientError as exc:  # 4xx
         if exc.code in (401, 403, 404, 429):
+            print(f"!!! GITHUB HACKATHON ERROR: ClientError {exc.code} - {exc}") # <--- ADD THIS
             return _offline_reply(message, profile)
         raise
     except errors.ServerError:  # 5xx
+        print("!!! GITHUB HACKATHON ERROR: ServerError") # <--- ADD THIS
         return _offline_reply(message, profile)
-    except (errors.APIError, ConnectionError, TimeoutError):
+    except (errors.APIError, ConnectionError, TimeoutError) as e:
+        print(f"!!! GITHUB HACKATHON ERROR: {type(e).__name__} - {e}") # <--- ADD THIS
         return _offline_reply(message, profile)
 
 
