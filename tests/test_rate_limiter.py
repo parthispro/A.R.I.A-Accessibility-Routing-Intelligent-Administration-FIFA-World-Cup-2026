@@ -157,10 +157,10 @@ def test_redis_limiter_namespaces_keys_and_reset_is_scoped():
     fake.store["unrelated:key"] = {"tokens": 1.0, "ts": 0.0}  # not ours
     limiter = RedisTokenBucketLimiter(fake, RATE_LIMIT_PER_MIN, 60.0)
     limiter.allow("9.9.9.9")
-    assert any(k.startswith("accessmate:rl:") for k in fake.store)
+    assert any(k.startswith("A.R.I.A.:rl:") for k in fake.store)
     limiter.reset()
     assert "unrelated:key" in fake.store, "reset must not touch foreign keys"
-    assert not any(k.startswith("accessmate:rl:") for k in fake.store)
+    assert not any(k.startswith("A.R.I.A.:rl:") for k in fake.store)
 
 
 def test_redis_reset_with_no_keys_never_calls_delete():
