@@ -463,7 +463,7 @@ select:focus,
   to   { opacity: 1; transform: none; }
 }
 
-/* Author label — meaning is carried by text ("You:"/"AccessMate:") not colour.
+/* Author label — meaning is carried by text ("You:"/"A.R.I.A") not colour.
    Full opacity: a dimmed label would blend toward the bubble background and
    quietly drop the AAA contrast the author colours below are chosen for. */
 .msg__author {
