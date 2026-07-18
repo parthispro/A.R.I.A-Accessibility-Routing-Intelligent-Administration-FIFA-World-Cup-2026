@@ -91,6 +91,8 @@ uvicorn app.main:app --reload
 View the platform:
 
 Open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser to launch the Fan Assistant interface.
+ADMIN ID:"admin_ad"
+ADMIN PASS:"ADMIN12341234"
 
 Navigate to your designated dashboard route to sign in to the Admin Console using your configuration credentials.
 
