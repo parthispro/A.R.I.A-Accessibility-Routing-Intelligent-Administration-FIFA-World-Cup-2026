@@ -485,11 +485,17 @@ def answer_stream(
         yield ("meta", "live")
         yield ("delta", _DECLINE[_decline_language(profile)])
         return
-    except errors.ClientError as exc:  # 4xx
+        
+    except errors.ClientError as exc:  # 4xx!!!!!
+        # CHANGE THIS LINE
+        print(f"!!! CRITICAL STREAM ERROR: {exc.code} - {exc}") 
+        
         if exc.code in (401, 403, 404, 429):
             yield from _offline_events(message, profile)
-            return
-        raise  # 400 etc. — our own bug, surface it
+            return # If it's a 400, print it and yield it so it displays in the chat
+        yield ("meta", "offline")
+        yield ("delta", f"Error 400: {str(exc)}")
+        return # 400 etc. — our own bug, surface it
     except (errors.APIError, ConnectionError, TimeoutError):  # 5xx / network
         yield from _offline_events(message, profile)
         return
