@@ -2,11 +2,7 @@
 
 Runs when no Gemini API key is configured or the live API fails. Routes the
 user's message to an intent via per-language keyword tables (en/es/fr/ar),
-calls the same tool functions the live assistant uses (``app.tools``), and
-renders the result through language-specific templates.
-
-Pure stdlib, deterministic, no network. Output is screen-reader-friendly:
-short plain sentences, no emoji or ASCII art.
+calls the same tool functions the live assistant uses (``app.tools``).
 """
 
 import re
