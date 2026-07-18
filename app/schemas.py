@@ -1,4 +1,4 @@
-"""Pydantic request/response models for the AccessMate API.
+"""Pydantic request/response models for the A.R.I.A API.
 
 These caps (message length, history size, needs enum) are the API's first line
 of input validation — oversized or malformed payloads are rejected by FastAPI
