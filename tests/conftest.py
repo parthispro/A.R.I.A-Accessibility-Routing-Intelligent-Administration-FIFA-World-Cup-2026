@@ -1,4 +1,4 @@
-"""Shared pytest fixtures for the AccessMate test suite.
+"""Shared pytest fixtures for the A.R.I.A test suite.
 
 Provides a reset TestClient, a sample venue id, and a lightweight fake
 google-genai client so tests can exercise the live path without a network or
