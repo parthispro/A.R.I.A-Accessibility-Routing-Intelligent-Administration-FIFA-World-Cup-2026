@@ -1,1 +1,1 @@
-"""Test suite for the AccessMate application."""
+"""Test suite for the A.R.I.A. application."""
