@@ -1,4 +1,4 @@
-"""FastAPI application layer for AccessMate.
+"""FastAPI application layer for A.R.I.A.
 
 Serves the accessible chat UI (static/) and a small JSON API. Security posture:
 - Strict security headers on every response (CSP default-src 'self', nosniff,
@@ -46,7 +46,7 @@ from app.schemas import (
     VenueSummary,
 )
 
-logger = logging.getLogger("accessmate")
+logger = logging.getLogger("A.R.I.A")
 
 _STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
 
@@ -161,7 +161,7 @@ class RedisTokenBucketLimiter:
         client: "redis.Redis",
         capacity: int,
         refill_seconds: float,
-        namespace: str = "accessmate:rl:",
+        namespace: str = "A.R.I.A:rl:",
     ) -> None:
         """Create a bucket that refills to ``capacity`` every ``refill_seconds``."""
         self.capacity = float(capacity)
@@ -249,7 +249,7 @@ def require_admin(
 rate_limiter = _build_rate_limiter()
 
 app = FastAPI(
-    title="AccessMate API",
+    title="A.R.I.A API",
     description="Accessibility-first stadium copilot for the FIFA World Cup 2026.",
     version="1.0.0",
 )
