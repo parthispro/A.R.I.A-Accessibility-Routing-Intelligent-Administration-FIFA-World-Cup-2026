@@ -1,8 +1,5 @@
 """Tests for the FastAPI layer (app.main).
 
-Runs entirely against the in-process app via TestClient; no network. Env keys
-are cleared so /api/chat exercises the deterministic offline engine, and the
-rate limiter is reset around every test.
 """
 
 import base64
