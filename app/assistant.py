@@ -1,4 +1,4 @@
-"""Gemini assistant core for AccessMate.
+"""Gemini assistant core for A.R.I.A.
 
 Wraps the google-genai SDK (the current SDK — NOT the deprecated
 ``google.generativeai``) with a manual function-calling loop over the tools in
