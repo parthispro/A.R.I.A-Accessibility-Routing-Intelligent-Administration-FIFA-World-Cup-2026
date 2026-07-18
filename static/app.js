@@ -1,5 +1,5 @@
 /*
-  AccessMate front-end logic.
+A.R.I.A front-end logic.
 
   Security posture:
     - ALL dynamic text (user input and assistant replies) is rendered with
