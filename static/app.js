@@ -571,7 +571,10 @@ async function sendMessage(rawText) {
     handleFrame(buffer); // final line, if not newline-terminated
 
     if (errored && !replyText) {
-      throw new Error("stream error");
+      throw new Error("stream error")
+        except Exception as e:
+        print(f"!!! REAL ERROR: {e}") 
+        yield '{"type": "meta", "mode": "offline"}';
     }
 
     // Swap the (aria-hidden) streaming bubble for a final, announced bubble so
