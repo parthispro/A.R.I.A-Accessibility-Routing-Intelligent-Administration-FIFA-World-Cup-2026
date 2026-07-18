@@ -22,7 +22,9 @@ Real-Time Sim-Feed: Secure operational overview showing live gate traffic metric
 Outage Flagging: Administrative control panels to log dynamic infrastructure disruptions (e.g., broken escalators, elevator outages) that instantly update the Fan Assistant routing logic.
 
 🛠️ Project Architecture & Stack
-'''Plaintext
+## 🛠️ Project Architecture & Stack
+
+```text
 ├── app/                  # Backend Application Core (Python / FastAPI)
 │   ├── main.py           # Application Entry point, Security Middleware & API Router
 │   ├── assistant.py      # Live Gemini AI Logic & Function-Calling Loop
@@ -31,8 +33,10 @@ Outage Flagging: Administrative control panels to log dynamic infrastructure dis
 └── static/               # Frontend Assets (100% Zero-Framework Vanilla Stack)
     ├── index.html        # Highly semantic structural layout (WCAG Compliant)
     ├── styles.css        # Clean layout styling with opaque, high-contrast UI panels
-    └── app.js            # Secure token handling, Fetch API calls, & WebGL interface wrapper'''
-Frontend: Standard HTML5, Vanilla CSS3, and Vanilla JavaScript. Built completely free of heavy frameworks or external CDNs to maximize loading speeds and stability over congested stadium cellular networks.
+    └── app.js            # Secure token handling, Fetch API calls, & WebGL interface wrapper
+```
+
+*   **Frontend:** Standard HTML5, Vanilla CSS3, and Vanilla JavaScript. Built completely free of heavy frameworks or external CDNs to maximize loading speeds and stability over congested stadium cellular networks.
 
 Backend: FastAPI (Python 3.12+).
 
